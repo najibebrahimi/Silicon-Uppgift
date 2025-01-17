@@ -1,0 +1,55 @@
+<section id="book-appointment">
+    <div class="card">
+        <div class="container">
+            <h2>Get Online Consulation</h2>
+            <div>
+                <form id="appointment-form" class="appointment-form">
+                    <div class="appointment-form-section">
+                        <label for="appointment-fullname">Full name</label>
+                        <input type="fullname" placeholder="" id="appointment-fullname" name="fullname" required>
+                        <div id="appointment-fullname-errorMessage" style="color: red; display: none;"></div>
+                    </div>
+                    <div class="appointment-form-section">
+                        <label for="appointment-email">Email address</label>
+                        <input type="email" placeholder="" id="appointment-email" name="email" required>
+                        <div id="appointment-email-errorMessage" style="color: red; display: none;"></div>
+                    </div>
+                    <div class="appointment-form-section">
+                        <label for="appointment-specialist-select">Specialist</label>
+                        <select name="specialists" id="appointment-specialists-select">
+                            <option value="Example Specialist">Example Specialist</option>
+                        </select>
+                        <div id="appointment-specialist-errorMessage" style="color: red; display: none;"></div>
+                    </div>
+                    <div class="appointment-form-section-flex-row">
+                        <div class="appointment-form-field">
+                            <label for="appointment-date-select">Date</label>
+                            <select name="date" id="appointment-date-select">
+                                <option value="2025-01-16">2025-01-16</option>
+                                <option value="2025-01-17">2025-01-17</option>
+                                <option value="2025-01-20">2025-01-20</option>
+                                <option value="2025-01-21">2025-01-21</option>
+                                <option value="2025-01-22">2025-01-22</option>
+                            </select> 
+                            <div id="appointment-date-errorMessage" style="color: red; display: none;"></div>
+                        </div>
+                        <div class="appointment-form-field">
+                            <label for="appointment-time-select">Time</label>
+                            <select name="time" id="appointment-time-select">
+                                <option value="08:00">08:00</option>
+                                <option value="10:00">10:00</option>
+                                <option value="11:00">11:00</option>
+                                <option value="13:00">13:00</option>
+                                <option value="15:00">15:00</option>
+                            </select>
+                            <div id="appointment-time-errorMessage" style="color: red; display: none;"></div>
+                        </div>
+                    </div>
+                    <button class="btn btn-theme" type="submit"><span>Make an appointment</span></button>
+                    <div id="appointment-successMessage" style="color: green; display: none;"></div>
+                    <div id="appointment-errorMessage" style="color: red; display: none;"></div>
+                </form> 
+            </div>
+        </div>
+    </div>
+</section>

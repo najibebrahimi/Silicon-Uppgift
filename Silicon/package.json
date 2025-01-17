@@ -1,0 +1,22 @@
+{
+  "name": "silicon",
+  "version": "1.0.0",
+  "description": "Silicon frontend",
+  "main": "vite.config.js",
+  "scripts": {
+    "dev": "node app.js",
+    "start": "node app.js",
+    "lint": "eslint . --ext js,jsx --report-unused-disable-directives --max-warnings 0",
+    "preview": "vite preview",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "",
+  "license": "ISC",
+  "devDependencies": {
+    "vite": "^5.4.9"
+  },
+  "dependencies": {
+    "ejs": "^3.1.10",
+    "express": "^4.21.1"
+  }
+}

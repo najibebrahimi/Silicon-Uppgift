@@ -1,0 +1,17 @@
+#appfeatures {
+    background: $gradient-background;
+
+    .container {
+        display: grid;
+        grid-template-columns: 1fr auto;
+        grid-template-areas: "img" "content";
+    }
+
+    .appfeatures-grid {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+    }
+    
+    .appfeatures-grid-item {
+    }
+}

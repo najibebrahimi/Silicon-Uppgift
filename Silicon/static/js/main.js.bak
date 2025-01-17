@@ -1,0 +1,90 @@
+async function getTestimonials() {
+    const url = "https://win24-assignment.azurewebsites.net/api/testimonials";
+    try {
+      const response = await fetch(url);
+      if (!response.ok) {
+        throw new Error(`Response status: ${response.status}`);
+      }
+  
+      const json = await response.json();
+      console.log(json);
+      /*var elem = document.getElementById("testimonials");
+      elem.InnerText = "test";*/
+    } catch (error) {
+      console.error(error.message);
+    }
+}
+
+async function getFAQs() {
+    const url = "https://win24-assignment.azurewebsites.net/api/faq";
+    try {
+      const response = await fetch(url);
+      if (!response.ok) {
+        throw new Error(`Response status: ${response.status}`);
+      }
+  
+      const json = await response.json();
+      console.log(json);
+      /*var elem = document.getElementById("testimonials");
+      elem.InnerText = "test";*/
+    } catch (error) {
+      console.error(error.message);
+    }
+}
+
+async function subscribe(emailAddress) {
+    const url = "https://win24-assignment.azurewebsites.net/api/forms/subscribe";
+    
+    try {
+        const myHeaders = new Headers();
+        myHeaders.append("Content-Type", "application/json");
+        
+        const response = await fetch(url, {
+            method: "POST",
+            body: JSON.stringify({
+                email: emailAddress,
+            }),
+            headers: myHeaders,
+        });
+        
+        console.log(response.status);
+
+        if (!response.ok) {
+          throw new Error(`Response status: ${response.status}`);
+        }
+      } catch (error) {
+        console.error(error.message);
+      }
+}
+
+async function contact(fullname, emailAddress, specialist) {
+    const url = "https://win24-assignment.azurewebsites.net/api/forms/contact";
+    
+    try {
+        const myHeaders = new Headers();
+        myHeaders.append("Content-Type", "application/json");
+        
+        const response = await fetch(url, {
+            method: "POST",
+            body: JSON.stringify({
+                fullName: fullname,
+                email: emailAddress,
+                specialist: specialist,
+            }),
+            headers: myHeaders,
+        });
+        
+        console.log(response.status);
+
+        if (!response.ok) {
+          throw new Error(`Response status: ${response.status}`);
+        }
+      } catch (error) {
+        console.error(error.message);
+      }
+}
+
+/*getTestimonials();
+getFAQs();
+subscribe("testemail@testdomain.com");
+contact("Test Name", "testemail@testdomain.com", "samplespecialist");*/
